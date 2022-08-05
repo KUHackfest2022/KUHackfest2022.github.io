@@ -28,27 +28,39 @@
 
     <div class="d-flex sticky-top"
         style="padding-top:10px;padding-right: 40px;border-bottom: solid 1px rgb(216, 216, 216);background-color: white;">
-        <div style="flex: 0.5;">
+        <div style="flex: 1;">
             <img src="./assets/images/logo.png" class="title-image" />
         </div>
 
         <div class="d-flex row" style="flex:1">
-            <div class="title-tab-div col-2 d-none d-sm-block">
-                <div class="title-tabs">Home</div>
+            <div class="title-tab-div d-none d-sm-block">
+                <div class="title-tabs">
+                    <a class="title-link" href="">
+                        <span class="title-link">
+                            Home
+                        </span>
+                    </a>
+                </div>
             </div>
-            <div class="title-tab-div col-2 d-none d-sm-block">
-                <div class="title-tabs">Restaurants</div>
+            <div class="title-tab-div d-none d-sm-block">
+                <div class="title-tabs">
+                    <a class="title-link" href="">
+                        <span class="title-link">
+                            About
+                        </span>
+                    </a>
+                </div>
             </div>
-            <div class="title-tab-div col-2 d-none d-sm-block">
-                <div class="title-tabs">Food</div>
+            <div class="title-tab-div d-none d-sm-block">
+                <div class="title-tabs">
+                    <a class="title-link" href="#bottom">
+                        <span class="title-link">
+                            Contact
+                        </span>
+                    </a>
+                </div>
             </div>
-            <div class="title-tab-div col-2 d-none d-sm-block">
-                <div class="title-tabs">About</div>
-            </div>
-            <div class="title-tab-div col-2 d-none d-sm-block">
-                <div class="title-tabs">Contact</div>
-            </div>
-            <div class="title-tab-div col-2 d-none d-sm-block">
+            <div class="title-tab-div d-none d-sm-block">
                 <div class="title-tabs-order">Order</div>
             </div>
         </div>
@@ -61,8 +73,6 @@
             </button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="#">Home</a>
-                <a class="dropdown-item" href="#">Restaurant</a>
-                <a class="dropdown-item" href="#">Food</a>
                 <a class="dropdown-item" href="#">About</a>
                 <a class="dropdown-item" href="#">Contact</a>
             </div>
@@ -73,25 +83,25 @@
     <div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg qr-modal-container">
-            <div class="modal-content" style="padding: 40px;">
+            <div class="modal-content text-center" style="padding: 40px;">
                 <button type="button" style="margin-left: auto ;font-size: 20px;" class="close" data-dismiss="modal"
                     aria-label="Close">
                     <span aria-hidden="true" style="margin: 20px;margin-top:30px;font-size: 20px;">&times;</span>
                 </button>
-                <div class="" id="qrModal"></div>
+                <div class="text-align" id="qrModal"></div>
             </div>
         </div>
     </div>
     <div class="modal fade bd-example-modal-lg-2" tabindex="-1" role="dialog" aria-labelledby="secondLargeModal"
         aria-hidden="true" id="LocationModal">
         <div class="modal-dialog modal-lg location-modal-container">
-            <div class="modal-content" style="padding: 40px;">
+            <div class="modal-content location-modal-content">
                 <button type="button" style="margin-left: auto ;font-size: 20px;" class="close" data-dismiss="modal"
                     aria-label="Close">
                     <span aria-hidden="true" style="margin: 20px;margin-top:30px;font-size: 20px;">&times;</span>
                 </button>
-                <div class="locationModal row" id="">
-                    <div class="col-4 text-center">
+                <div class="locationModal row g-0" id="">
+                    <div class="col-md-4 text-center">
                         <img src="./assets/images/image3.jpg" class="restaurant-image-small" style="margin: auto;"
                             alt="">
                         <div class="location-modal-title">
@@ -100,15 +110,17 @@
                         <div class="location-modal-location">
                             Dhulikhel, Kavre
                         </div>
-                        <button class="btn btn-primary" style="margin-top: 30px;">
+
+                        <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png');closeModalAll()"
+                            data-target=".bd-example-modal-lg" class="btn btn-primary view-in-ar"
+                            style="margin-top: 30px;">
                             View In AR
+
                         </button>
                     </div>
-                    <div class="col-8 " style="display:flex;flex-direction:column">
+                    <div class="col-md-8 " style="display:flex;flex-direction:column">
 
-                        <div>
-                            <div id="map"></div>
-                        </div>
+                        <div id="map"></div>
                     </div>
                 </div>
 
@@ -139,7 +151,7 @@
                         </div>
                     </span>
                     <span class="slider-images-container text-center">
-                        <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+                        <img src="./assets/images/image3.jpg" class="restaurant-image-large" alt="">
                         <div class="text-center card-restro-name">Burger King</div>
                         <div class="swiper-slide-caption">
                             <i class="fa fa-utensils slider-images-container-icon"></i>
@@ -155,7 +167,7 @@
                         </div>
                     </span>
                     <span class="slider-images-container text-center">
-                        <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+                        <img src="./assets/images/image4.jpg" class="restaurant-image-large" alt="">
                         <div class="text-center card-restro-name">Burger King</div>
                         <div class="swiper-slide-caption">
                             <i class="fa fa-utensils slider-images-container-icon"></i>
@@ -285,15 +297,19 @@
             </div>
         </div>
     </div>
-
+    <div id="bottom"></div>
 
 
     <script>
+        function closeModalAll() {
+            $('#LocationModal').modal('hide');
+
+        }
         function addImage(info) {
 
             var img = document.createElement("img");
             img.src = info;
-            img.style = "width: 80%;margin: auto;"
+            img.style = "width: 70%;margin: auto;"
             var block = document.getElementById("qrModal");
             block.innerHTML = "";
             block.appendChild(img);
@@ -307,7 +323,7 @@
 
         // Adding marker to the map
         marker.addTo(map);
-        
+
 
         var modal = document.getElementById("LocationModal")
         $("#LocationModal").on('shown.bs.modal', function () {

@@ -6,8 +6,19 @@
 
 .title-tab-div {
     padding-top: 30px;
+    padding-left: 0px;
+    padding-right: 30px;
     flex: 1;
 }
+.title-tabs a:hover{
+    text-decoration: none;
+    color:#FF6600 !important;
+}
+.title-tabs a{
+    text-decoration: none;
+    color:#fff !important;
+}
+
 
 .title-tabs {
     padding: 10px;
@@ -17,7 +28,6 @@
     vertical-align: middle;
     margin-top: auto;
     width: 100px;
-    margin-left: 20px;
     text-align: center;
     font-size: 12px;
     transition: 0.6s;
@@ -243,7 +253,7 @@
 }
 
 .qr-modal-container {
-    max-width: 30%;
+    width: 30%;
     border-radius: 50px;
 }
 
@@ -266,6 +276,14 @@
     font-size: 24px;
     font-weight: 100;
     text-align: center;
+}
+
+.location-modal-content{
+    padding: 40px;
+}
+
+.qr-modal-container{
+    max-width: 50%;
 }
 
 @media only screen and (max-width: 400px) {
@@ -300,5 +318,23 @@
         margin: auto;
         position: absolute;
         top: 200px;
+    }
+    .location-modal-container {
+        max-width: 92%;
+        border-radius: 50px;
+    }
+    #map{
+        height: 400px;
+    }
+    .locationModal{
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    .location-modal-content{
+        padding: 0px;
+    }
+    .view-in-ar{
+        margin-bottom: 40px;
     }
 }
