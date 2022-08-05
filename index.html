@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="/library/bootstrap.css">
+    <link rel="stylesheet" href="./library/swiper.css">
+</head>
+
+<body>
+    <script src="./library/jquery.js"></script>
+    <script src="./library/bootstrap.js"></script>
+    <script src="./library/three.js"></script>
+    <script src="./library/swiper.js"></script>
+
+    <div class="d-flex sticky-top" style="padding-right: 40px;border-bottom: solid 1px rgb(216, 216, 216);">
+        <divm style="flex:2">
+            <img src="./assets/images/image1.jpg" class="title-image" />
+        </divm>
+        <div class="d-flex" style="flex:1">
+            <div class="title-tab-div">
+                <div class="title-tabs">Home</div>
+            </div>
+            <div class="title-tab-div">
+                <div class="title-tabs">Restaurants</div>
+            </div>
+            <div class="title-tab-div">
+                <div class="title-tabs">Food</div>
+            </div>
+            <div class="title-tab-div">
+                <div class="title-tabs">About</div>
+            </div>
+            <div class="title-tab-div">
+                <div class="title-tabs">Contact</div>
+            </div>
+            <div class="title-tab-div">
+                <div class="title-tabs-order">Order</div>
+            </div>
+        </div>
+    </div>
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <span style="flex:1">
+                    <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+                </span>
+                <span style="flex:1">
+                    <img src="./assets/images/image3.jpg" class="restaurant-image-large" alt="">
+                </span>
+                <span style="flex:1">
+                    <img src="./assets/images/image4.jpg" class="restaurant-image-large" alt="">
+                </span>
+                <span style="flex:1">
+                    <img src="./assets/images/image5.jpg" class="restaurant-image-large" alt="">
+                </span>
+            </div>
+            <div class="swiper-slide">
+                <span style="flex:1">
+                    <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+                    
+                </span>
+                <span style="flex:1">
+                    <img src="./assets/images/image3.jpg" class="restaurant-image-large" alt="">
+                </span>
+                <span style="flex:1">
+                    <img src="./assets/images/image4.jpg" class="restaurant-image-large" alt="">
+                </span>
+                <span style="flex:1">
+                    <img src="./assets/images/image5.jpg" class="restaurant-image-large" alt="">
+                </span>
+            </div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+
+    <!--- <div class="restaurant-container d-flex">
+        <div class="restaurant-container-item">
+            <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+        </div>
+        <div class="restaurant-container-item">
+            <img src="./assets/images/image3.jpg" class="restaurant-image-large" alt="">
+        </div>
+        <div class="restaurant-container-item">
+            <img src="./assets/images/image4.jpg" class="restaurant-image-large" alt="">
+        </div>
+        <div class="restaurant-container-item">
+            <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+        </div>
+    </div>
+    -->
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            speed:3000,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+
+</body>
+
+</html>

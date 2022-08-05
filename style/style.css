@@ -1,0 +1,68 @@
+.title-image{
+    width: 130px;
+}
+.title-tab-div{
+    padding-top: 30px;
+    flex: 1;
+}
+.title-tabs{
+    padding: 10px;
+    background-color: #FF6600;
+    border-radius: 50px;
+    color: white;
+    vertical-align: middle;
+    margin-top: auto;
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 12px;
+    transition: 0.6s;
+}
+.title-tabs:hover{
+    border:solid 1px #FF6600;
+    background-color: white;
+    color: #FF6600;
+    cursor: pointer;
+}
+.title-tabs-order{
+    padding: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    vertical-align: middle;
+    margin-top: auto;
+    width: 100px;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 12px;
+    transition: 0.6s;
+}
+.title-tabs-order:hover{
+    border:solid 1px black;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.restaurant-container{
+    padding: 30px;
+    display: flex;
+}
+.restaurant-container-item{
+    flex: 1;
+}
+.restaurant-image-large{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 30px;
+}
+.swiper {
+  width: 100%;
+}
+.swiper-slide{
+    display: flex;
+    padding-top:30px;
+    padding-left:50px ;
+    padding-right:50px ;
+}
