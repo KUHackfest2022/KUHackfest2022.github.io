@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="/library/bootstrap.css">
     <link rel="stylesheet" href="./library/swiper.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+        integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+        crossorigin=""></script>
 </head>
 
 <body>
@@ -19,8 +24,10 @@
     <script src="./library/swiper.js"></script>
     <script src="https://kit.fontawesome.com/3307952f9a.js" crossorigin="anonymous"></script>
     <script src="./script/script.js"></script>
+
+
     <div class="d-flex sticky-top"
-        style="padding-right: 40px;border-bottom: solid 1px rgb(216, 216, 216);background-color: white;">
+        style="padding-top:10px;padding-right: 40px;border-bottom: solid 1px rgb(216, 216, 216);background-color: white;">
         <div style="flex: 0.5;">
             <img src="./assets/images/logo.png" class="title-image" />
         </div>
@@ -45,11 +52,27 @@
                 <div class="title-tabs-order">Order</div>
             </div>
         </div>
+        <div class="dropdown d-block d-md-none">
+            <button style="border: none;background-color:#fff" class="dropright" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown">
+                <i class="fa fa-bars "
+                    style="background-color: #FF6600;color:white;padding: 10px;margin-top: 30px;"></i>
+
+            </button>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Home</a>
+                <a class="dropdown-item" href="#">Restaurant</a>
+                <a class="dropdown-item" href="#">Food</a>
+                <a class="dropdown-item" href="#">About</a>
+                <a class="dropdown-item" href="#">Contact</a>
+            </div>
+        </div>
+
     </div>
 
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    <div class="modal fade bd-example-modal-lg " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true">
-        <div class="modal-dialog modal-lg" style="max-width: 40%;border-radius: 50px;">
+        <div class="modal-dialog modal-lg qr-modal-container">
             <div class="modal-content" style="padding: 40px;">
                 <button type="button" style="margin-left: auto ;font-size: 20px;" class="close" data-dismiss="modal"
                     aria-label="Close">
@@ -59,6 +82,40 @@
             </div>
         </div>
     </div>
+    <div class="modal fade bd-example-modal-lg-2" tabindex="-1" role="dialog" aria-labelledby="secondLargeModal"
+        aria-hidden="true" id="LocationModal">
+        <div class="modal-dialog modal-lg location-modal-container">
+            <div class="modal-content" style="padding: 40px;">
+                <button type="button" style="margin-left: auto ;font-size: 20px;" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true" style="margin: 20px;margin-top:30px;font-size: 20px;">&times;</span>
+                </button>
+                <div class="locationModal row" id="">
+                    <div class="col-4 text-center">
+                        <img src="./assets/images/image3.jpg" class="restaurant-image-small" style="margin: auto;"
+                            alt="">
+                        <div class="location-modal-title">
+                            Burger King
+                        </div>
+                        <div class="location-modal-location">
+                            Dhulikhel, Kavre
+                        </div>
+                        <button class="btn btn-primary" style="margin-top: 30px;">
+                            View In AR
+                        </button>
+                    </div>
+                    <div class="col-8 " style="display:flex;flex-direction:column">
+
+                        <div>
+                            <div id="map"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
@@ -70,7 +127,11 @@
                         <div class="text-center card-restro-name">Burger King</div>
                         <div class="swiper-slide-caption">
                             <i class="fa fa-utensils slider-images-container-icon"></i>
-                            <i class="fa fa-landmark slider-images-container-icon"></i>
+
+                            <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png')"
+                                data-target=".bd-example-modal-lg-2" style="border:none;padding:0">
+                                <i class="fa fa-landmark slider-images-container-icon"></i>
+                            </button>
                             <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png')"
                                 data-target=".bd-example-modal-lg" style="border:none;padding:0">
                                 <i class="fa fa-qrcode slider-images-container-icon"></i>
@@ -78,24 +139,16 @@
                         </div>
                     </span>
                     <span class="slider-images-container text-center">
-                        <img src="./assets/images/image3.jpg" class="restaurant-image-large" alt="">
-                        <div class="text-center card-restro-name">Burger House</div>
+                        <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+                        <div class="text-center card-restro-name">Burger King</div>
                         <div class="swiper-slide-caption">
                             <i class="fa fa-utensils slider-images-container-icon"></i>
-                            <i class="fa fa-landmark slider-images-container-icon"></i>
-                            <button data-toggle="modal" onclick="addImage('./assets/images/burgerHouse.png')"
-                                data-target=".bd-example-modal-lg" style="border:none;padding:0">
-                                <i class="fa fa-qrcode slider-images-container-icon"></i>
+
+                            <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png')"
+                                data-target=".bd-example-modal-lg-2" style="border:none;padding:0">
+                                <i class="fa fa-landmark slider-images-container-icon"></i>
                             </button>
-                        </div>
-                    </span>
-                    <span class="slider-images-container text-center">
-                        <img src="./assets/images/image4.jpg" class="restaurant-image-large" alt="">
-                        <div class="text-center card-restro-name">Chicken Station</div>
-                        <div class="swiper-slide-caption">
-                            <i class="fa fa-utensils slider-images-container-icon"></i>
-                            <i class="fa fa-landmark slider-images-container-icon"></i>
-                            <button data-toggle="modal" onclick="addImage('./assets/images/chickenStation.png')"
+                            <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png')"
                                 data-target=".bd-example-modal-lg" style="border:none;padding:0">
                                 <i class="fa fa-qrcode slider-images-container-icon"></i>
                             </button>
@@ -103,16 +156,38 @@
                     </span>
                     <span class="slider-images-container text-center">
                         <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
-                        <div class="text-center card-restro-name">Mc Donalds</div>
+                        <div class="text-center card-restro-name">Burger King</div>
                         <div class="swiper-slide-caption">
                             <i class="fa fa-utensils slider-images-container-icon"></i>
-                            <i class="fa fa-landmark slider-images-container-icon"></i>
-                            <button data-toggle="modal" onclick="addImage('./assets/images/mcdonalds.jpg')"
+
+                            <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png')"
+                                data-target=".bd-example-modal-lg-2" style="border:none;padding:0">
+                                <i class="fa fa-landmark slider-images-container-icon"></i>
+                            </button>
+                            <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png')"
                                 data-target=".bd-example-modal-lg" style="border:none;padding:0">
                                 <i class="fa fa-qrcode slider-images-container-icon"></i>
                             </button>
                         </div>
                     </span>
+                    <span class="slider-images-container text-center">
+                        <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+                        <div class="text-center card-restro-name">Burger King</div>
+                        <div class="swiper-slide-caption">
+                            <i class="fa fa-utensils slider-images-container-icon"></i>
+
+                            <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png')"
+                                data-target=".bd-example-modal-lg-2" style="border:none;padding:0">
+                                <i class="fa fa-landmark slider-images-container-icon"></i>
+                            </button>
+                            <button data-toggle="modal" onclick="addImage('./assets/images/burgerKing.png')"
+                                data-target=".bd-example-modal-lg" style="border:none;padding:0">
+                                <i class="fa fa-qrcode slider-images-container-icon"></i>
+                            </button>
+                        </div>
+                    </span>
+
+
                 </div>
 
             </div>
@@ -155,8 +230,8 @@
         </div>
     </div>
 
-    <div class="footer-container">
-        <div class="footer-section-1 d-flex flex-column" style="flex: 1.5;">
+    <div class="footer-container row">
+        <div class="footer-section-1 d-flex flex-column col-xs-5" style="flex: 1.5;">
             <div class="app-footer-title">APP TITLE</div>
             <div class="app-footer-desc"> This is the app for hackfest 2022 This is the app for hackfest 2022 This is
                 the app for hackfest 2022</div>
@@ -168,7 +243,7 @@
                 <i class="fa fa-linkedin fa-footer-icon" style="background-color: #0E76A8;"></i>
             </div>
         </div>
-        <div class="footer-section-2">
+        <div class="footer-section-2 col-xs-3">
             <div class="useful-links">Useful Links</div>
             <div class="d-flex row">
                 <div class="col-6" style="display: flex;flex-direction:column">
@@ -177,7 +252,7 @@
                     <div class="links-list-item">WishList</div>
                     <div class="links-list-item">Bug Report</div>
                 </div>
-                <div class="col-md-6" style="display: flex;flex-direction:column">
+                <div class="col-6" style="display: flex;flex-direction:column">
                     <div class="links-list-item">Cart</div>
                     <div class="links-list-item">Order Tracking</div>
                     <div class="links-list-item">Competition</div>
@@ -185,7 +260,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-section-3">
+        <div class="footer-section-3 col-xs-4">
             <div class="useful-links">Contact Us</div>
             <div class="">
                 <div class="">
@@ -218,18 +293,35 @@
 
             var img = document.createElement("img");
             img.src = info;
-            img.style = "width: 100%;margin: auto;"
+            img.style = "width: 80%;margin: auto;"
             var block = document.getElementById("qrModal");
             block.innerHTML = "";
             block.appendChild(img);
         }
+        var stadium = new L.LatLng(27.621074, 85.552846);
+
+        var map = L.map('map').setView(stadium, 15);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+        var marker = L.marker([27.621074, 85.552846]);
+
+        // Adding marker to the map
+        marker.addTo(map);
+        
+
+        var modal = document.getElementById("LocationModal")
+        $("#LocationModal").on('shown.bs.modal', function () {
+            setTimeout(function () {
+                map.invalidateSize()
+            }, 1)
+        })
 
         const swiper = new Swiper('.swiper', {
             // Optional parameters
             direction: 'horizontal',
             loop: true,
             speed: 3000,
-            breakpoints:{
+            breakpoints: {
             },
 
             // If we need pagination
@@ -248,13 +340,13 @@
                 el: '.swiper-scrollbar',
             },
         });
-        if(screen.width<600){
+        if (screen.width < 600) {
             swiper.destroy()
-            var elem = document.getElementById("swiper-btn-1"); 
+            var elem = document.getElementById("swiper-btn-1");
             elem.remove();
-            elem = document.getElementById("swiper-btn-2"); 
+            elem = document.getElementById("swiper-btn-2");
             elem.remove();
-            
+
         }
     </script>
 
