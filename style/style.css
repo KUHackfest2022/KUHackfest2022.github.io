@@ -66,3 +66,12 @@
     padding-left:50px ;
     padding-right:50px ;
 }
+.swiper-slide-caption{
+    background-color: rgb(238, 238, 238);
+    padding: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 30px;
+    width: 80%;
+    margin: auto;
+}

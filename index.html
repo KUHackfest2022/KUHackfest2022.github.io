@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="/library/bootstrap.css">
     <link rel="stylesheet" href="./library/swiper.css">
+
 </head>
 
 <body>
@@ -16,11 +17,12 @@
     <script src="./library/bootstrap.js"></script>
     <script src="./library/three.js"></script>
     <script src="./library/swiper.js"></script>
+    <script src="https://kit.fontawesome.com/3307952f9a.js" crossorigin="anonymous"></script>
 
     <div class="d-flex sticky-top" style="padding-right: 40px;border-bottom: solid 1px rgb(216, 216, 216);">
-        <divm style="flex:2">
+        <div style="flex:2">
             <img src="./assets/images/image1.jpg" class="title-image" />
-        </divm>
+        </div>
         <div class="d-flex" style="flex:1">
             <div class="title-tab-div">
                 <div class="title-tabs">Home</div>
@@ -47,8 +49,11 @@
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-                <span style="flex:1">
+                <span style="flex:1;flex-direction: column;">
                     <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
+                    <div class="swiper-slide-caption">
+                        <i class="fa fa-utensils"></i>
+                    </div>
                 </span>
                 <span style="flex:1">
                     <img src="./assets/images/image3.jpg" class="restaurant-image-large" alt="">
@@ -63,7 +68,7 @@
             <div class="swiper-slide">
                 <span style="flex:1">
                     <img src="./assets/images/image2.jpg" class="restaurant-image-large" alt="">
-                    
+
                 </span>
                 <span style="flex:1">
                     <img src="./assets/images/image3.jpg" class="restaurant-image-large" alt="">
@@ -103,7 +108,7 @@
             // Optional parameters
             direction: 'horizontal',
             loop: true,
-            speed:3000,
+            speed: 3000,
 
             // If we need pagination
             pagination: {
