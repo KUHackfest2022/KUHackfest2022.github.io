@@ -46,6 +46,19 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="padding: 40px;">
+                <button type="button" style="margin-left: auto ;margin-top: 20px;" class="close" data-dismiss="modal"
+                    aria-label="Close">
+                    <span aria-hidden="true" style="margin: 20px;margin-top:30px">&times;</span>
+                </button>
+                <img src="./assets/images/burgerHouse.png" style="width: 450px;margin: auto;" alt="">
+            </div>
+        </div>
+    </div>
     <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
@@ -57,8 +70,14 @@
                     <div class="swiper-slide-caption">
                         <i class="fa fa-utensils slider-images-container-icon"></i>
                         <i class="fa fa-landmark slider-images-container-icon"></i>
-                        <i class="fa fa-qrcode slider-images-container-icon"></i>
+                        <button data-toggle="modal" data-target=".bd-example-modal-lg" style="border:none;padding:0">
+                            <i class="fa fa-qrcode slider-images-container-icon"></i>
+                        </button>
                     </div>
+
+
+
+
                 </span>
                 <span class="slider-images-container">
                     <img src="./assets/images/image3.jpg" class="restaurant-image-large" alt="">
@@ -161,14 +180,16 @@
         </div>
         <div class="input-field-div">
             <input type="text" class="text-field-1" placeholder="Your Email">
-            <i class="fa fa-paper-plane" style="color: white;background-color: green;padding: 14px;padding-left: 20px;padding-right: 20px;margin: 0px;"></i>
+            <i class="fa fa-paper-plane"
+                style="color: white;background-color: green;padding: 14px;padding-left: 20px;padding-right: 20px;margin: 0px;"></i>
         </div>
     </div>
 
     <div class="footer-container">
         <div class="footer-section-1 d-flex flex-column" style="flex: 1.5;">
             <div class="app-footer-title">APP TITLE</div>
-            <div class="app-footer-desc"> This is the app for hackfest 2022 This is the app for hackfest 2022 This is the app for hackfest 2022</div>
+            <div class="app-footer-desc"> This is the app for hackfest 2022 This is the app for hackfest 2022 This is
+                the app for hackfest 2022</div>
             <div class="fa-footer-div">
                 <i class="fa fa-facebook fa-footer-icon" style="background-color: blue"></i>
                 <i class="fa fa-instagram fa-footer-icon" style="background-color: #E12F6B"></i>
