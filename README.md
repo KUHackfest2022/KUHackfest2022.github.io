@@ -1,19 +1,12 @@
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 <br />
 <div align="center">
   <a href="https://github.com/KUHackfest2022/Website/">
     <img src="./assets/images/logo.png" alt="Logo" width="250" height="250">
   </a>
 
-  <h3 align="center">App Name</h3>
+  <h3 align="center">ARestro</h3>
 
   <p align="center">
     Solving Classical Problem By Digitalizing Restaurant
@@ -36,13 +29,12 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-using">Built Using</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -55,22 +47,29 @@
 
 
 
+### About the Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This project strives towards the revolutionary upgrade from the traditional restaurant culture to fully digital restaurant culture. This website is one of the two essential component of turning restaurants and hotel in to a paperless serving system. In addition to providing people the opportunity to order online, we provide them 
+the opportunity to see what they are going to be served bofore hand. Using the latest AR tech using Vuforia we will be able to see the near real life scale of the food.
+The site will provide us with a custom QR code made using the logo of the organization which you will be able to scan using our Android/Ios App. Then we can sucessfully scroll through different models and see it live on a surface.
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+> Below is the screenshot of the desktop version of the website
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+<img src="./readmeAssets/Screenshot_1.png" alt="Logo">
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+> The functionality below allows us to find the location of the restaurant you are visiting
 
-Use the `BLANK_README.md` to get started.
+<img src="./readmeAssets/Screenshot_2.png" alt="Logo" style="margin:auto">
+
+> The design is also responsive in your phone
+
+![Alt Text](./assets/ezgif.com-gif-maker.gif)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+### Built Using 
 
 The major frameworks used in the project are below, new frameworks/ library might be added according to our necessity.
 
