@@ -36,13 +36,12 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-using">Built Using</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -65,19 +64,14 @@ The site will provide us with a custom QR code made using the logo of the organi
 
 <img src="./readmeAssets/Screenshot_1.png" alt="Logo">
 
-Find the location of your restaurant in the click of a button
+> The functionality below allows us to find the location of the restaurant you are visiting
 
 <img src="./readmeAssets/Screenshot_2.png" alt="Logo" style="margin:auto">
 
+> The design is also responsive in your phone
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+![Alt Text](./assets/ezgif.com-gif-maker.gif)
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
