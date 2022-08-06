@@ -55,6 +55,13 @@
 
 
 
+### About the Project
+
+This project strives towards the revolutionary upgrade from the traditional restaurant culture to fully digital restaurant culture. This website is one of the two essential component of turning restaurants and hotel in to a paperless serving system. In addition to providing people the opportunity to order online, we provide them 
+the opportunity to see what they are going to be served bofore hand. Using the latest AR tech using Vuforia we will be able to see the near real life scale of the food.
+The site will provide us with a custom QR code made using the logo of the organization which you will be able to scan using our Android/Ios App. Then we can sucessfully scroll through different models and see it live on a surface.
+
+> Below is the screenshot of the desktop version of the website
 
 <img src="./readmeAssets/Screenshot_1.png" alt="Logo">
 
@@ -74,6 +81,8 @@ Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+### Built Using 
 
 The major frameworks used in the project are below, new frameworks/ library might be added according to our necessity.
 
