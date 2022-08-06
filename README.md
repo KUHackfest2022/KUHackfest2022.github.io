@@ -13,7 +13,7 @@
     <img src="./assets/images/logo.png" alt="Logo" width="250" height="250">
   </a>
 
-  <h3 align="center">App Name</h3>
+  <h3 align="center">ARestro</h3>
 
   <p align="center">
     Solving Classical Problem By Digitalizing Restaurant
