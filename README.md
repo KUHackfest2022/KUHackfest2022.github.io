@@ -58,7 +58,10 @@
 
 <img src="./readmeAssets/Screenshot_1.png" alt="Logo">
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Find the location of your restaurant in the click of a button
+
+<img src="./readmeAssets/Screenshot_2.png" alt="Logo" style="margin:auto">
+
 
 Here's why:
 * Your time should be focused on creating something amazing. A project that solves a problem and helps others
